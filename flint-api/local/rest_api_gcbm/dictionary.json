@@ -1,0 +1,593 @@
+{
+  "AG_Biomass_C": {
+    "title": "Aboveground Biomass",
+    "database_indicator": "Aboveground Biomass",
+    "file_pattern": "AG_Biomass_C_*.tif",
+    "graph_units": ""
+  },
+  "All_Emissions": {
+    "title": "All Emissions",
+    "database_indicator": "All Emissions",
+    "file_pattern": "All_Emissions_*.tif",
+    "graph_units": ""
+  },
+  "All_Production": {
+    "title": "All Production",
+    "database_indicator": "All Production",
+    "file_pattern": "All_Production_*.tif",
+    "graph_units": ""
+  },
+  "Annual_Litterfall": {
+    "title": "Annual Litterfall",
+    "database_indicator": "Annual Litterfall",
+    "file_pattern": "Annual_Litterfall_*.tif",
+    "graph_units": ""
+  },
+  "Annual_Mortality": {
+    "title": "Annual Mortality",
+    "database_indicator": "Annual Mortality",
+    "file_pattern": "Annual_Mortality_*.tif",
+    "graph_units": ""
+  },
+  "Belowground_Biomass": {
+    "title": "Belowground Biomass",
+    "database_indicator": "Belowground Biomass",
+    "file_pattern": "Belowground_Biomass_*.tif",
+    "graph_units": ""
+  },
+  "BioCH4Emission": {
+    "title": "BioCH4Emission",
+    "database_indicator": "BioCH4Emission",
+    "file_pattern": "BioCH4Emission_*.tif",
+    "graph_units": ""
+  },
+  "BioCO2Emission": {
+    "title": "BioCO2Emission",
+    "database_indicator": "BioCO2Emission",
+    "file_pattern": "BioCO2Emission_*.tif",
+    "graph_units": ""
+  },
+  "BioCOEmission": {
+    "title": "BioCOEmission",
+    "database_indicator": "BioCOEmission",
+    "file_pattern": "BioCOEmission_*.tif",
+    "graph_units": ""
+  },
+  "Biomass_Emissions": {
+    "title": "Biomass Emissions",
+    "database_indicator": "Biomass Emissions",
+    "file_pattern": "Biomass_Emissions_*.tif",
+    "graph_units": ""
+  },
+  "Biomass_Removals": {
+    "title": "Biomass Removals",
+    "database_indicator": "Biomass Removals",
+    "file_pattern": "Biomass_Removals_*.tif",
+    "graph_units": ""
+  },
+  "BiomassToDOM": {
+    "title": "BiomassToDOM",
+    "database_indicator": "BiomassToDOM",
+    "file_pattern": "BiomassToDOM_*.tif",
+    "graph_units": ""
+  },
+  "CH4_Emissions": {
+    "title": "CH4 Emissions",
+    "database_indicator": "CH4 Emissions",
+    "file_pattern": "CH4_Emissions_*.tif",
+    "graph_units": ""
+  },
+  "CH4Production": {
+    "title": "CH4Production",
+    "database_indicator": "CH4Production",
+    "file_pattern": "CH4Production_*.tif",
+    "graph_units": ""
+  },
+  "CO_Emissions": {
+    "title": "CO Emissions",
+    "database_indicator": "CO Emissions",
+    "file_pattern": "CO_Emissions_*.tif",
+    "graph_units": ""
+  },
+  "CO2_Emissions": {
+    "title": "CO2 Emissions",
+    "database_indicator": "CO2 Emissions",
+    "file_pattern": "CO2_Emissions_*.tif",
+    "graph_units": ""
+  },
+  "CO2Production": {
+    "title": "CO2Production",
+    "database_indicator": "CO2Production",
+    "file_pattern": "CO2Production_*.tif",
+    "graph_units": ""
+  },
+  "COProduction": {
+    "title": "COProduction",
+    "database_indicator": "COProduction",
+    "file_pattern": "COProduction_*.tif",
+    "graph_units": ""
+  },
+  "CoarseLitterInput": {
+    "title": "CoarseLitterInput",
+    "database_indicator": "CoarseLitterInput",
+    "file_pattern": "CoarseLitterInput_*.tif",
+    "graph_units": ""
+  },
+  "DOM_Emissions": {
+    "title": "DOM Emissions",
+    "database_indicator": "DOM Emissions",
+    "file_pattern": "DOM_Emissions_*.tif",
+    "graph_units": ""
+  },
+  "DOM_Emissions_Annual_Process": {
+    "title": "DOM Emissions - Annual Process",
+    "database_indicator": "DOM Emissions - Annual Process",
+    "file_pattern": "DOM_Emissions_Annual_Process_*.tif",
+    "graph_units": ""
+  },
+  "DOM_Emissions_Disturbance": {
+    "title": "DOM Emissions - Disturbance",
+    "database_indicator": "DOM Emissions - Disturbance",
+    "file_pattern": "DOM_Emissions_Disturbance_*.tif",
+    "graph_units": ""
+  },
+  "DOM_Removals": {
+    "title": "DOM Removals",
+    "database_indicator": "DOM Removals",
+    "file_pattern": "DOM_Removals_*.tif",
+    "graph_units": ""
+  },
+  "DOMCH4Emission": {
+    "title": "DOMCH4Emission",
+    "database_indicator": "DOMCH4Emission",
+    "file_pattern": "DOMCH4Emission_*.tif",
+    "graph_units": ""
+  },
+  "DOMCH4Emission_Disturbance": {
+    "title": "DOMCH4Emission - Disturbance",
+    "database_indicator": "DOMCH4Emission - Disturbance",
+    "file_pattern": "DOMCH4Emission_Disturbance_*.tif",
+    "graph_units": ""
+  },
+  "DOMCO2Emission": {
+    "title": "DOMCO2Emission",
+    "database_indicator": "DOMCO2Emission",
+    "file_pattern": "DOMCO2Emission_*.tif",
+    "graph_units": ""
+  },
+  "DOMCO2Emission_Annual_Process": {
+    "title": "DOMCO2Emission - Annual Process",
+    "database_indicator": "DOMCO2Emission - Annual Process",
+    "file_pattern": "DOMCO2Emission_Annual_Process_*.tif",
+    "graph_units": ""
+  },
+  "DOMCO2Emission_Disturbance": {
+    "title": "DOMCO2Emission - Disturbance",
+    "database_indicator": "DOMCO2Emission - Disturbance",
+    "file_pattern": "DOMCO2Emission_Disturbance_*.tif",
+    "graph_units": ""
+  },
+  "DOMCOEmission": {
+    "title": "DOMCOEmission",
+    "database_indicator": "DOMCOEmission",
+    "file_pattern": "DOMCOEmission_*.tif",
+    "graph_units": ""
+  },
+  "DOMCOEmission_Disturbance": {
+    "title": "DOMCOEmission - Disturbance",
+    "database_indicator": "DOMCOEmission - Disturbance",
+    "file_pattern": "DOMCOEmission_Disturbance_*.tif",
+    "graph_units": ""
+  },
+  "DOMProduction": {
+    "title": "DOMProduction",
+    "database_indicator": "DOMProduction",
+    "file_pattern": "DOMProduction_*.tif",
+    "graph_units": ""
+  },
+  "Deadwood": {
+    "title": "Deadwood",
+    "database_indicator": "Deadwood",
+    "file_pattern": "Deadwood_*.tif",
+    "graph_units": ""
+  },
+  "Deadwood_to_Air": {
+    "title": "Deadwood to Air",
+    "database_indicator": "Deadwood to Air",
+    "file_pattern": "Deadwood_to_Air_*.tif",
+    "graph_units": ""
+  },
+  "Deadwood_to_Atmosphere": {
+    "title": "Deadwood to Atmosphere",
+    "database_indicator": "Deadwood to Atmosphere",
+    "file_pattern": "Deadwood_to_Atmosphere_*.tif",
+    "graph_units": ""
+  },
+  "Decomposition_Releases": {
+    "title": "Decomposition Releases",
+    "database_indicator": "Decomposition Releases",
+    "file_pattern": "Decomposition_Releases_*.tif",
+    "graph_units": ""
+  },
+  "Decomp_Releases": {
+    "title": "Decomposition Releases",
+    "database_indicator": "Decomposition Releases",
+    "file_pattern": "Decomp_Releases_*.tif",
+    "graph_units": ""
+  },
+  "Delta_Total_Biomass": {
+    "title": "Delta Total Biomass",
+    "database_indicator": "Delta Total Biomass",
+    "file_pattern": "Delta_Total_Biomass_*.tif",
+    "graph_units": ""
+  },
+  "Delta_Total_DOM": {
+    "title": "Delta Total DOM",
+    "database_indicator": "Delta Total DOM",
+    "file_pattern": "Delta_Total_DOM_*.tif",
+    "graph_units": ""
+  },
+  "Delta_Total_Ecosystem": {
+    "title": "Delta Total Ecosystem",
+    "database_indicator": "Delta Total Ecosystem",
+    "file_pattern": "Delta_Total_Ecosystem_*.tif",
+    "graph_units": ""
+  },
+  "Disturbance_Emissions_and_DOM_Annual_Process_Emissions": {
+    "title": "Disturbance Emissions and DOM Annual Process Emissions",
+    "database_indicator": "Disturbance Emissions and DOM Annual Process Emissions",
+    "file_pattern": "Disturbance_Emissions_and_DOM_Annual_Process_Emissions_*.tif",
+    "graph_units": ""
+  },
+  "Disturbance_Losses": {
+    "title": "Disturbance Losses",
+    "database_indicator": "Disturbance Losses",
+    "file_pattern": "Disturbance_Losses_*.tif",
+    "graph_units": ""
+  },
+  "Ecosystem_Removals": {
+    "title": "Ecosystem Removals",
+    "database_indicator": "Ecosystem Removals",
+    "file_pattern": "Ecosystem_Removals_*.tif",
+    "graph_units": ""
+  },
+  "FastAGToAir": {
+    "title": "FastAGToAir",
+    "database_indicator": "FastAGToAir",
+    "file_pattern": "FastAGToAir_*.tif",
+    "graph_units": ""
+  },
+  "FastBGToAir": {
+    "title": "FastBGToAir",
+    "database_indicator": "FastBGToAir",
+    "file_pattern": "FastBGToAir_*.tif",
+    "graph_units": ""
+  },
+  "FineLitterInput": {
+    "title": "FineLitterInput",
+    "database_indicator": "FineLitterInput",
+    "file_pattern": "FineLitterInput_*.tif",
+    "graph_units": ""
+  },
+  "FineToAir": {
+    "title": "FineToAir",
+    "database_indicator": "FineToAir",
+    "file_pattern": "FineToAir_*.tif",
+    "graph_units": ""
+  },
+  "FolLitterInput": {
+    "title": "FolLitterInput",
+    "database_indicator": "FolLitterInput",
+    "file_pattern": "FolLitterInput_*.tif",
+    "graph_units": ""
+  },
+  "FolToAir": {
+    "title": "FolToAir",
+    "database_indicator": "FolToAir",
+    "file_pattern": "FolToAir_*.tif",
+    "graph_units": ""
+  },
+  "Gross_Growth": {
+    "title": "Gross Growth",
+    "database_indicator": "Gross Growth",
+    "file_pattern": "Gross_Growth_*.tif",
+    "graph_units": ""
+  },
+  "GrossGrowth_AG": {
+    "title": "GrossGrowth_AG",
+    "database_indicator": "GrossGrowth_AG",
+    "file_pattern": "GrossGrowth_AG_*.tif",
+    "graph_units": ""
+  },
+  "GrossGrowth_BG": {
+    "title": "GrossGrowth_BG",
+    "database_indicator": "GrossGrowth_BG",
+    "file_pattern": "GrossGrowth_BG_*.tif",
+    "graph_units": ""
+  },
+  "Litter": {
+    "title": "Litter",
+    "database_indicator": "Litter",
+    "file_pattern": "Litter_*.tif",
+    "graph_units": ""
+  },
+  "Litter_to_Air": {
+    "title": "Litter to Air",
+    "database_indicator": "Litter to Air",
+    "file_pattern": "Litter_to_Air_*.tif",
+    "graph_units": ""
+  },
+  "Litterfall_Annual_Process": {
+    "title": "Litterfall - Annual Process",
+    "database_indicator": "Litterfall - Annual Process",
+    "file_pattern": "Litterfall_Annual_Process_*.tif",
+    "graph_units": ""
+  },
+  "Litterfall_Combined": {
+    "title": "Litterfall - Combined",
+    "database_indicator": "Litterfall - Combined",
+    "file_pattern": "Litterfall_Combined_*.tif",
+    "graph_units": ""
+  },
+  "Live_Production": {
+    "title": "Live Production",
+    "database_indicator": "Live Production",
+    "file_pattern": "Live_Production_*.tif",
+    "graph_units": ""
+  },
+  "MediumToAir": {
+    "title": "MediumToAir",
+    "database_indicator": "MediumToAir",
+    "file_pattern": "MediumToAir_*.tif",
+    "graph_units": ""
+  },
+  "Merch_Other": {
+    "title": "Merch/Other",
+    "database_indicator": "Merch/Other",
+    "file_pattern": "Merch_Other_*.tif",
+    "graph_units": ""
+  },
+  "MerchLitterInput": {
+    "title": "MerchLitterInput",
+    "database_indicator": "MerchLitterInput",
+    "file_pattern": "MerchLitterInput_*.tif",
+    "graph_units": ""
+  },
+  "MerchSnagInput": {
+    "title": "MerchSnagInput",
+    "database_indicator": "MerchSnagInput",
+    "file_pattern": "MerchSnagInput_*.tif",
+    "graph_units": ""
+  },
+  "Mortality_Annual_Process": {
+    "title": "Mortality - Annual Process",
+    "database_indicator": "Mortality - Annual Process",
+    "file_pattern": "Mortality_Annual_Process_*.tif",
+    "graph_units": ""
+  },
+  "Mortality_Combined": {
+    "title": "Mortality - Combined",
+    "database_indicator": "Mortality - Combined",
+    "file_pattern": "Mortality_Combined_*.tif",
+    "graph_units": ""
+  },
+  "NBP": {
+    "title": "NBP",
+    "database_indicator": "NBP",
+    "file_pattern": "NBP_*.tif",
+    "graph_units": ""
+  },
+  "NEP": {
+    "title": "NEP",
+    "database_indicator": "NEP",
+    "file_pattern": "NEP_*.tif",
+    "graph_units": ""
+  },
+  "NPP": {
+    "title": "NPP",
+    "database_indicator": "NPP",
+    "file_pattern": "NPP_*.tif",
+    "graph_units": ""
+},
+  "OthLitterInput": {
+    "title": "OthLitterInput",
+    "database_indicator": "OthLitterInput",
+    "file_pattern": "OthLitterInput_*.tif",
+    "graph_units": ""
+  },
+  "OthToAir": {
+    "title": "OthToAir",
+    "database_indicator": "OthToAir",
+    "file_pattern": "OthToAir_*.tif",
+    "graph_units": ""
+  },
+  "Rh": {
+    "title": "Rh",
+    "database_indicator": "Rh",
+    "file_pattern": "Rh_*.tif",
+    "graph_units": ""
+  },
+  "SWBranchSnagToAir": {
+    "title": "SWBranchSnagToAir",
+    "database_indicator": "SWBranchSnagToAir",
+    "file_pattern": "SWBranchSnagToAir_*.tif",
+    "graph_units": ""
+  },
+  "SWStemSnagToAir": {
+    "title": "SWStemSnagToAir",
+    "database_indicator": "SWStemSnagToAir",
+    "file_pattern": "SWStemSnagToAir_*.tif",
+    "graph_units": ""
+  },
+  "SlowAGToAir": {
+    "title": "SlowAGToAir",
+    "database_indicator": "SlowAGToAir",
+    "file_pattern": "SlowAGToAir_*.tif",
+    "graph_units": ""
+  },
+  "SlowBGToAir": {
+    "title": "SlowBGToAir",
+    "database_indicator": "SlowBGToAir",
+    "file_pattern": "SlowBGToAir_*.tif",
+    "graph_units": ""
+  },
+  "SnagToProducts": {
+    "title": "SnagToProducts",
+    "database_indicator": "SnagToProducts",
+    "file_pattern": "SnagToProducts_*.tif",
+    "graph_units": ""
+  },
+  "SoftProduction": {
+    "title": "SoftProduction",
+    "database_indicator": "SoftProduction",
+    "file_pattern": "SoftProduction_*.tif",
+    "graph_units": ""
+  },
+  "Softwood_Harvest_Biomass": {
+    "title": "Softwood Harvest (Biomass)",
+    "database_indicator": "Softwood Harvest (Biomass)",
+    "file_pattern": "Softwood_Harvest_Biomass_*.tif",
+    "graph_units": ""
+  },
+  "Soil_Carbon": {
+    "title": "Soil Carbon",
+    "database_indicator": "Soil Carbon",
+    "file_pattern": "Soil_Carbon_*.tif",
+    "graph_units": ""
+  },
+  "Soil_C": {
+    "title": "Soil Carbon",
+    "database_indicator": "Soil Carbon",
+    "file_pattern": "Soil_C_*.tif",
+    "graph_units": ""
+  },
+  "Soil_to_Air": {
+    "title": "Soil to Air",
+    "database_indicator": "Soil to Air",
+    "file_pattern": "Soil_to_Air_*.tif",
+    "graph_units": ""
+  },
+  "Soil_to_Atmosphere": {
+    "title": "Soil to Atmosphere",
+    "database_indicator": "Soil to Atmosphere",
+    "file_pattern": "Soil_to_Atmosphere_*.tif",
+    "graph_units": ""
+  },
+  "Total_Biomass": {
+    "title": "Total Biomass",
+    "database_indicator": "Total Biomass",
+    "file_pattern": "Total_Biomass_*.tif",
+    "graph_units": ""
+  },
+  "Total_Biomass_C": {
+    "title": "Total Biomass",
+    "database_indicator": "Total Biomass",
+    "file_pattern": "Total_Biomass_C_*.tif",
+    "graph_units": ""
+  },
+  "Total_Biomass_Emissions": {
+    "title": "Total Biomass Emissions",
+    "database_indicator": "Total Biomass Emissions",
+    "file_pattern": "Total_Biomass_Emissions_*.tif",
+    "graph_units": ""
+  },
+  "Total_CH4_Emissions": {
+    "title": "Total CH4 Emissions",
+    "database_indicator": "Total CH4 Emissions",
+    "file_pattern": "Total_CH4_Emissions_*.tif",
+    "graph_units": ""
+  },
+  "Total_CO_Emissions": {
+    "title": "Total CO Emissions",
+    "database_indicator": "Total CO Emissions",
+    "file_pattern": "Total_CO_Emissions_*.tif",
+    "graph_units": ""
+  },
+  "Total_CO2_Emissions": {
+    "title": "Total CO2 Emissions",
+    "database_indicator": "Total CO2 Emissions",
+    "file_pattern": "Total_CO2_Emissions_*.tif",
+    "graph_units": ""
+  },
+  "Total_DOM_Emissions": {
+    "title": "Total DOM Emissions",
+    "database_indicator": "Total DOM Emissions",
+    "file_pattern": "Total_DOM_Emissions_*.tif",
+    "graph_units": ""
+  },
+  "Total_Detrital_Transfers": {
+    "title": "Total Detrital Transfers",
+    "database_indicator": "Total Detrital Transfers",
+    "file_pattern": "Total_Detrital_Transfers_*.tif",
+    "graph_units": ""
+  },
+  "Total_Ecosystem": {
+    "title": "Total Ecosystem",
+    "database_indicator": "Total Ecosystem",
+    "file_pattern": "Total_Ecosystem_*.tif",
+    "graph_units": ""
+  },
+  "Total_Ecosystem_C": {
+    "title": "Total Ecosystem",
+    "database_indicator": "Total Ecosystem",
+    "file_pattern": "Total_Ecosystem_C_*.tif",
+    "graph_units": ""
+  },
+  "Total_Emissions": {
+    "title": "Total Emissions",
+    "database_indicator": "Total Emissions",
+    "file_pattern": "Total_Emissions_*.tif",
+    "graph_units": ""
+  },
+  "Total_Harvest_Biomass_Snags": {
+    "title": "Total Harvest (Biomass + Snags)",
+    "database_indicator": "Total Harvest (Biomass + Snags)",
+    "file_pattern": "Total_Harvest_Biomass_Snags_*.tif",
+    "graph_units": ""
+  },
+  "Total_Harvest_Biomass": {
+    "title": "Total Harvest (Biomass)",
+    "database_indicator": "Total Harvest (Biomass)",
+    "file_pattern": "Total_Harvest_Biomass_*.tif",
+    "graph_units": ""
+  },
+  "Total_Harvest_Snags": {
+    "title": "Total Harvest (Snags)",
+    "database_indicator": "Total Harvest (Snags)",
+    "file_pattern": "Total_Harvest_Snags_*.tif",
+    "graph_units": ""
+  },
+  "Total_Litterfall": {
+    "title": "Total Litterfall",
+    "database_indicator": "Total Litterfall",
+    "file_pattern": "Total_Litterfall_*.tif",
+    "graph_units": ""
+  },
+  "Total_Mortality": {
+    "title": "Total Mortality",
+    "database_indicator": "Total Mortality",
+    "file_pattern": "Total_Mortality_*.tif",
+    "graph_units": ""
+  },
+  "Total_Snag_Biomass": {
+    "title": "Total Snag Biomass",
+    "database_indicator": "Total Snag Biomass",
+    "file_pattern": "Total_Snag_Biomass_*.tif",
+    "graph_units": ""
+  },
+  "VFastAGToAir": {
+    "title": "VFastAGToAir",
+    "database_indicator": "VFastAGToAir",
+    "file_pattern": "VFastAGToAir_*.tif",
+    "graph_units": ""
+  },
+  "VFastBGToAir": {
+    "title": "VFastBGToAir",
+    "database_indicator": "VFastBGToAir",
+    "file_pattern": "VFastBGToAir_*.tif",
+    "graph_units": ""
+  }
+}
+
+
+

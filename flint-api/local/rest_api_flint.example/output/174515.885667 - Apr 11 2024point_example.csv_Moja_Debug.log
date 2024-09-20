@@ -1,0 +1,45 @@
+<2024-04-11 17:45:15.905674> (info) - Config has files: 2
+<2024-04-11 17:45:15.906126> (info) - Using Logging Configuration: config/logging.debug_on.conf
+<2024-04-11 17:45:15.906168> (info) - Using configurations: 
+<2024-04-11 17:45:15.906177> (info) - config/received_point_example.json
+<2024-04-11 17:45:15.906182> (info) - config/libs.base.simple.json
+<2024-04-11 17:45:15.912047> (info) - Using operation manager: Simple
+<2024-04-11 17:45:15.912146> (debug) - LibraryManager(46) - LibraryManager: contructor no args
+<2024-04-11 17:45:15.912220> (debug) - LoadInternalLibrary(427) - LibraryMLoadInternalLibraryanager: entered
+<2024-04-11 17:45:15.912235> (debug) - LoadInternalLibrary(431) - LibraryMLoadInternalLibraryanager: calling AddLibrary : internal.flint
+<2024-04-11 17:45:15.912247> (debug) - AddLibrary(78) - AddLibrary: entered : internal.flint
+<2024-04-11 17:45:15.912264> (debug) - LoadInternalLibrary(441) - LibraryMLoadInternalLibraryanager: calling registrations
+<2024-04-11 17:45:15.912273> (debug) - getFlintModuleRegistrations(107) - getFlintModuleRegistrations: entered
+<2024-04-11 17:45:15.912281> (debug) - getFlintModuleRegistrations(166) - getFlintModuleRegistrations: exit - 20
+<2024-04-11 17:45:15.912307> (debug) - getFlintTransformRegistrations(171) - getFlintTransformRegistrations: entered
+<2024-04-11 17:45:15.912342> (debug) - getFlintTransformRegistrations(194) - getFlintTransformRegistrations: exit - 9
+<2024-04-11 17:45:15.912364> (debug) - getFlintFlintDataRegistrations(199) - getFlintFlintDataRegistrations: entered
+<2024-04-11 17:45:15.912377> (debug) - getFlintFlintDataRegistrations(219) - getFlintFlintDataRegistrations: exit - 8
+<2024-04-11 17:45:15.912429> (debug) - getFlintFlintDataFactoryRegistrations(224) - getFlintFlintDataFactoryRegistrations: entered
+<2024-04-11 17:45:15.912450> (debug) - getFlintFlintDataFactoryRegistrations(230) - getFlintFlintDataFactoryRegistrations: exit - 1
+<2024-04-11 17:45:15.912493> (debug) - getProviderRegistrations(235) - getProviderRegistrations: entered
+<2024-04-11 17:45:15.912537> (debug) - getProviderRegistrations(250) - getProviderRegistrations: exit - 2
+<2024-04-11 17:45:15.912557> (debug) - RegisterProviders(407) - RegisterProviders: entered : internal.flint : count 2
+<2024-04-11 17:45:15.912570> (debug) - RegisterProviders(411) - RegisterProviders: loop: 0
+<2024-04-11 17:45:15.912606> (debug) - RegisterProviders(416) - RegisterProviders: loop: internal.flint : RasterTiled
+<2024-04-11 17:45:15.912651> (debug) - RegisterProviders(411) - RegisterProviders: loop: 1
+<2024-04-11 17:45:15.912669> (debug) - RegisterProviders(416) - RegisterProviders: loop: internal.flint : SQLite
+<2024-04-11 17:45:15.912679> (debug) - getProviderRegistrations(235) - getProviderRegistrations: entered
+<2024-04-11 17:45:15.912687> (debug) - getProviderRegistrations(250) - getProviderRegistrations: exit - 2
+<2024-04-11 17:45:15.912694> (debug) - RegisterProviders(407) - RegisterProviders: entered : internal.flint : count 2
+<2024-04-11 17:45:15.912703> (debug) - RegisterProviders(411) - RegisterProviders: loop: 0
+<2024-04-11 17:45:15.912711> (debug) - RegisterProviders(416) - RegisterProviders: loop: internal.flint : RasterTiled
+<2024-04-11 17:45:15.912746> (debug) - RegisterProviders(411) - RegisterProviders: loop: 1
+<2024-04-11 17:45:15.912786> (debug) - RegisterProviders(416) - RegisterProviders: loop: internal.flint : SQLite
+<2024-04-11 17:45:15.912813> (debug) - AddLibrary(78) - AddLibrary: entered : moja.flint.example.base
+<2024-04-11 17:45:15.913382> (debug) - RegisterProviders(407) - RegisterProviders: entered : moja.flint.example.base : count 0
+<2024-04-11 17:45:15.913543> (info) - modules loaded: 
+<2024-04-11 17:45:15.913587> (info) - 	library: internal.flint, module name: CalendarSequencer
+<2024-04-11 17:45:15.913597> (info) - 	library: internal.flint, module name: OutputerStream
+<2024-04-11 17:45:15.913603> (info) - 	library: internal.flint, module name: OutputerStreamFlux
+<2024-04-11 17:45:15.913608> (info) - 	library: internal.flint, module name: TestModule1
+<2024-04-11 17:45:15.913613> (info) - 	library: internal.flint, module name: TestModule2
+<2024-04-11 17:45:15.913624> (info) - 	library: internal.flint, module name: TestModule3
+<2024-04-11 17:45:15.913631> (info) - 	library: internal.flint, module name: TransactionManagerEndOfStepModule
+<2024-04-11 17:45:15.913639> (info) - 	library: moja.flint.example.base, module name: ErrorScreenWriter
+<2024-04-11 17:45:15.913646> (info) - Operation manager: Simple, Version: 1.0, Config: (Kahan[OFF], ZeroTransfers[OFF], AllowNegativeTransfers[ON], WarnNegativeTransfers[OFF])

@@ -1,0 +1,178 @@
+{
+  "LocalDomain": {
+    "type": "point",
+    "start_date": "1920/01/01",
+    "end_date": "1924/12/31",
+    "sequencer_library": "internal.flint",
+    "sequencer": "CalendarSequencer",
+    "simulateLandUnit": "simulateLandUnit",
+    "landUnitBuildSuccess": "landUnitBuildSuccess",
+    "operationManager": {
+      "name": "Simple",
+      "use_kahan": false,
+      "allow_zero_result_transfers": false
+    }
+  },
+  "Pools": [ "initialValues", "plantCM", "SoilDPM", "SoilRPM", "SoilBioF", "SoilBioS", "SoilHUM", "SoilIOM", "atmosphere", "offsiteCM" ],
+  "Variables": [
+    {
+      "localDomainId": 1
+    },
+    {
+      "simulateLandUnit": true
+    },
+    {
+      "spatialLocationInfo": {
+        "flintdata": {
+          "library": "internal.flint",
+          "type": "SpatialLocationInfo",
+          "settings": {}
+        }
+      }
+    },
+    {
+      "landUnitBuildSuccess": true
+    },
+    {
+      "landUnitArea": 1.0
+    },
+    {
+      "isSoilCovered": true
+    },
+    {
+      "TSMD": 0.0
+    },
+    {
+      "clayFrac": 0.94
+    },
+    {
+      "rainfall": {
+        "transform": {
+          "allow_nulls": true,
+          "library": "moja.flint.example.base",
+          "type": "TimeSeriesTransform",
+          "data": [ 0.0, 24.00, 23.00, 25.00, 55.00, 78.00, 77.00, 89.00, 77.00, 63.00, 52.00, 39.00, 29.00, 24.70, 24.60, 22.90, 20.90, 18.70, 15.20, 14.20, 14.80, 17.60, 20.60, 22.90, 24.00, 22.60, 23.50, 31.00, 22.00, 19.00, 16.50, 13.00, 13.20, 18.00, 20.50, 22.40, 27.00, 23.00, 24.00, 26.00, 21.00, 18.60, 16.00, 14.00, 14.10, 17.20, 20.00, 23.00, 26.00 ]}
+      }
+    },
+    {
+      "openPanEvap": {
+        "transform": {
+          "allow_nulls": true,
+          "library": "moja.flint.example.base",
+          "type": "TimeSeriesTransform",
+          "data": [ 0.0, 230.00, 209.00, 162.00, 105.00, 68.000, 45.000, 50.000, 68.000, 92.000, 138.00, 171.00, 211.00, 26.647, 28.827, 31.007, 33.187, 35.367, 37.547, 39.727, 41.907, 44.087, 46.267, 63.707, 65.887, 29.027, 31.887, 34.747, 37.607, 40.467, 43.327, 46.187, 49.047, 51.907, 54.767, 77.647, 80.507, 28.000, 30.557, 33.114, 35.671, 38.229, 40.786, 43.343, 45.900, 48.457, 51.014, 71.471, 74.029 ] }
+      }
+    },
+    {
+      "avgAirTemp": {
+        "transform": {
+          "allow_nulls": true,
+          "library": "moja.flint.example.base",
+          "type": "TimeSeriesTransform",
+          "data": [ 0.0, 22.5, 23.0, 20.4, 17.7, 14.4, 12.0, 11.4, 12.0, 13.4, 16.0, 18.4, 20.6, 22.5, 23.0, 20.4, 17.7, 14.4, 12.0, 11.4, 12.0, 13.4, 16.0, 18.4, 20.6, 22.5, 23.0, 20.4, 17.7, 14.4, 12.0, 11.4, 12.0, 13.4, 16.0, 18.4, 20.6, 22.5, 23.0, 20.4, 17.7, 14.4, 12.0, 11.4, 12.0, 13.4, 16.0, 18.4, 20.6 ]}
+      }
+    },
+    {
+      "presCM": {
+        "transform": {
+          "allow_nulls": true,
+          "library": "moja.flint.example.base",
+          "type": "TimeSeriesTransform",
+          "data": [ 0.0, 10.08, 13.50, 9.30, 8.60, 7.40, 7.50, 7.50, 8.60, 10.00, 10.20, 10.20, 10.30, 9.43, 13.40, 9.20, 8.50, 7.30, 7.40, 7.40, 8.50, 9.90, 10.10, 10.10, 10.20, 8.78, 11.40, 9.10, 9.20, 7.40, 6.80, 6.50, 10.70, 10.40, 9.40, 9.20, 9.70, 8.13, 12.30, 8.90, 9.80, 7.40, 6.10, 5.50, 12.80, 10.80, 8.60, 8.20, 9.10 ]}
+      }
+    },
+    {
+      "soilCover": {
+        "transform": {
+          "allow_nulls": true,
+          "library": "moja.flint.example.base",
+          "type": "TimeSeriesTransform",
+          "data": [ 1.0, 1.000, 0.900, 0.800, 0.359, 0.100, 0.200, 0.200, 0.500, 0.800, 0.289, 1.000, 0.600, 0.200, 1.000, 0.800, 0.587, 0.027, 0.100, 0.300, 0.173, 0.900, 0.486, 0.200, 0.800, 0.600, 0.000, 0.700, 0.400, 0.500, 0.400, 0.800, 0.200, 0.250, 0.000, 0.100, 0.700, 0.800, 0.680, 0.900, 0.213, 0.973, 0.200, 0.999, 0.227, 0.140, 0.996, 0.200, 0.600 ]}
+      }
+    },
+    {
+      "initSoil": {
+        "dpmaCMInit": 0.02,
+        "rpmaCMInit": 8.681,
+        "biofCMInit": 0.05,
+        "biosCMInit": 0.03,
+        "humsCMInit": 20.96,
+        "inrtCMInit": 43.0,
+        "TSMDInit": 35.21
+      }
+    },
+    {
+      "soil": {
+        "fracManuCMToDpma": 0.49,
+        "fracManuCMToRpma": 0.49,
+        "fracManuCMToBiof": 0.0,
+        "fracManuCMToBios": 0.0,
+        "dToRRatioInPres": 2.84,
+        "encpFracHums": 0.68,
+        "sampleDepth": 26.0,
+        "sdcmRateMultDpm": 12.0,
+        "sdcmRateMultRpm": 0.5,
+        "sdcmRateMultBiof": 0.0,
+        "sdcmRateMultBios": 0.76,
+        "sdcmRateMultHums": 0.05,
+        "fracPbioToBiof": 0.49,
+        "fracHumsToBios": 0.0,
+        "evapoOpenRatio": 2.5,
+        "bToCMaxTSMDRatio": 3.0
+      }
+    }
+  ],
+  "Modules": {
+    "TransactionManagerEndOfStepModule": {
+      "library": "internal.flint",
+      "order": 1
+    },
+    "CalendarSequencer": {
+      "library": "internal.flint",
+      "order": 2
+    },
+    "PlantResidueModule": {
+      "enabled": true,
+      "library": "moja.flint.example.rothc",
+      "order": 3
+    },
+    "SoilCoverModule": {
+      "enabled": true,
+      "library": "moja.flint.example.rothc",
+      "order": 4
+    },
+    "RothCModule": {
+      "enabled": true,
+      "library": "moja.flint.example.rothc",
+      "order": 5
+    },
+    "ErrorScreenWriter": {
+      "enabled": true,
+      "library": "moja.flint.example.base",
+      "order": 10,
+      "settings": {
+        "log_errors_max_number": 10
+      }
+    },
+    "OutputerStream": {
+      "enabled": true,
+      "library": "internal.flint",
+      "order": 11,
+      "settings": {
+        "output_filename": "Example_Rothc_Point_Stock.csv",
+        "output_to_screen": true,
+        "output_info_header": true
+      }
+    },
+    "OutputerStreamFlux": {
+      "enabled": true,
+      "library": "internal.flint",
+      "order": 12,
+      "settings": {
+        "output_filename": "Example_Rothc_Point_Flux.csv",
+        "output_to_screen": false,
+        "output_info_header": true
+      }
+    }
+  }
+}
