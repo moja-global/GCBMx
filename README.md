@@ -1,14 +1,14 @@
 <div align="center">
 <img src="https://moja.global/wp-content/uploads/2021/03/Asset-66@4x.png" alt="FLINT UI logo" height ="auto" width="200" />
 <br />
-<h1>FLINT UI</h1>
+<h1>gcbmx</h1>
 <p>
   🚧🚧🚧🚧
-      
+
   A FLINT client, written in Vue, to provide an awesome user interface for configuring simulations using the FLINT.Cloud APIs
-  
-  This is experimental and incomplete. The framework may be a useful starting point for new users who wish to create their own interface 
-  
+
+  This is experimental and incomplete. The framework may be a useful starting point for new users who wish to create their own interface
+
   🚧🚧🚧🚧
 </p>
 <a href="https://github.com/moja-global/FLINT-UI"><img src="https://img.shields.io/github/contributors/moja-global/FLINT-UI.svg?color=74e8a3&style=flat-square" /></a>
@@ -19,163 +19,67 @@
 
 <br />
 
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#developer-notes">Developer notes</a>
-    </li>
-    <li><a href="#how-to-get-involved">How to Get Involved?</a></li>
-    <li><a href="#faq-and-other-questions">FAQ and Other Questions</a></li>
-    <li><a href="#contributors">Contributors</a></li>
-    <li><a href="#maintainers-reviewers-ambassadors-coaches">Maintainers Reviewers Ambassadors Coaches</a></li>
-    <li><a href="#license">License</a></li>
-  </ol>
-</details>
+# GCBMx - Greenhouse Gas Accounting Automation Tool
 
-## About The Project
+## Project Overview
 
-This project provides an intuitive way for new to explore some preconfigured FLINT modules, including the Generic Carbon Budget Model (GCBM), in order to better understand how the FLINT system works. Our client is written as a Web application and can be used in a local or remote environment. Please contact us if you'd like help deploying your cloud instance or customizing the client.
+The **GCBMx** project is focused on developing and deploying a comprehensive tool that automates various tasks related to Greenhouse Gas (GHG) accounting using the **Generic Carbon Budget Model (GCBM)**. The tool integrates multiple functionalities, including:
 
-### Built with
+- **Configuration Management**
+- **Data Management**
+- **Simulation Configuration**
+- **Data Preprocessing**
+- **Visualization of Results**
+- **Data Export**
 
-- [Vue.js](https://vuejs.org/)
-- [Ant Design Vue ](https://antdv.com/)
-- [TailwindCSS](https://tailwindcss.com/)
-- [Cypress](https://www.cypress.io/)
-- [Apexcharts](https://apexcharts.com/)
-- [day.js](https://day.js.org/)
-- [OpenLayers](https://openlayers.org/)
+By streamlining these processes, **GCBMx** aims to facilitate efficient GHG accounting and help users analyze environmental data more effectively.
 
-## Getting started
+## Key Features
+
+- **Automated Data Fetching**: GCBMx automates the process of fetching relevant datasets.
+- **Data Preprocessing**: Provides preprocessing functionality for both vector and raster datasets.
+- **Simulation Configuration**: Automates the configuration of simulation models using GCBM, simplifying the setup process.
+- **Visualization Tools**: Supports visualizing results through intuitive plots and dashboards.
+- **Data Export**: Enables easy export of results for further analysis or reporting purposes.
+
+## Project Phases
+
+The project follows a phased approach to ensure proper planning, development, and deployment:
+
+1. **Design and Planning**
+   In this phase, the project scope, features, and technical requirements are defined. It includes:
+   - Identifying project goals and target users.
+   - Drafting a technical plan for integrating GCBM with data management and visualization tools.
+
+2. **Development**
+   The core functionalities of GCBMx are implemented in this phase, including:
+   - Creating APIs for fetching and processing data.
+   - Building interfaces for managing configurations and visualizing results.
+
+3. **Testing**
+   During this phase, the tool is rigorously tested to ensure all functionalities work as expected, including:
+   - Unit and integration tests for APIs and components.
+   - End-to-end testing of the GHG accounting workflow.
+
+4. **Deployment**
+   The final phase involves deploying the tool into a production environment using **Docker Compose**. The deployed tool will be publicly accessible and ready for use by end users.
+
+## System Requirements
+
+- **Docker** and **Docker Compose** are required to build and run the services.
+- Basic knowledge of **GHG accounting** and the **GCBM** model is recommended for users.
+
+## Setup and Installation
 
 ### Prerequisites
 
-In order to use and work on this project you need to install Docker for running the Docker image and Yarn to run the Vue app locally.
+1. Install [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/).
 
-You can install Docker following the download's [instructions](https://docs.docker.com/get-docker/).
+2. Clone the project repository:
 
-In order to install Yarn, open a terminal and type:
-
-```shell
-npm install -g yarn
-```
-
-### Installation
-
-To set up this project locally follow the below procedure:
-
-1. Pull the below docker image to run `flint.example`:
-
-```shell
-docker pull shubhamkarande13/flint.example:bionic
-```
-
-2. Clone [FLINT.UI](https://github.com/moja-global/FLINT-UI) repository:
-
-When using submodules the installation code needs to be:
-
-```shell
-git clone --recursive https://github.com/moja-global/flint-ui
-```
-
-Or if you've already initialized the repository without the submodule
-
-```shell
-git submodule update --init --recursive
-```
-
-3. Now get inside the repository directory and build the `docker-compose.yml` file by following the below command:
-
-```shell
-docker-compose up
-```
-
-This will build all the docker images inside the `docker-compose.yml` file. It will take some time and after that, you can see all images list in the Docker app.
-
-<div align="center">
-<img src="assets/docker-images.jpg">
-</div>
-
-<br />
-
-`docker-compose.yml` file is composed of three services i.e. `flint.example.api`, `flint.gcbm.api`, `flint.ui`.
-
-Now you can start all the containers by clicking on the `START` button or using the command `docker-compose up`. You can also use the command `docker start {name of the container}` to start the only specific container.
-
-All containers list will look like this in the Docker app:
-
-<div align="center">
-<img src="assets/docker-containers.jpg">
-</div>
-
-<br />
-
-If you want to shut down a specific container click on the `STOP` button of that specific container in the Docker app. You can also use the command line to stop a specific container by using the command `docker stop {name of the container you want to stop}`.
-
-To shut down, the whole `docker-compose.yml` file and all services inside it then use the command `docker-compose down`.
-
-> You can also run `docker-compose.yml` in Detached mode. Detached mode, shown by the option `--detach` or `-d`, means that a Docker container runs in the background of your terminal. It does not receive input or display output. So the command for running `docker-compose up` in Detached mode is `docker-compose up -d`.
-
-4. To view the UI please navigate to [127.0.0.1:8000](http://127.0.0.1:8000/). UI will look something like this:
-
-<div align="center">
-<img src="assets/flint-ui-dashboard.png">
-</div>
-
-## Contributing
-
-### Commit Convention
-
-Before you create a Pull Request, please check whether your commits comply with
-the commit conventions used in this repository.
-
-When you create a commit we kindly ask you to follow the convention
-`category(scope or module): message` in your commit message while using one of
-the following categories:
-
-- `feat / feature`: all changes that introduce completely new code or new
-  features
-- `fix`: changes that fix a bug (ideally you will additionally reference an
-  issue if present)
-- `refactor`: any code related change that is not a fix nor a feature
-- `docs`: changing existing or creating new documentation (i.e. README, docs for
-  usage of a lib or cli usage)
-- `build`: all changes regarding the build of the software, changes to
-  dependencies or the addition of new dependencies
-- `test`: all changes regarding tests (adding new tests or changing existing
-  ones)
-- `ci`: all changes regarding the configuration of continuous integration (i.e.
-  github actions, ci system)
-- `chore`: all changes to the repository that do not fit into any of the above
-  categories
-
-If you are interested in the detailed specification you can visit
-https://www.conventionalcommits.org/
-
-The project is configured with [husky](https://typicode.github.io/husky/#/) git-hook which on every successive commits checks for linting errors in the codebase and commit convention.
-
-To ease writing conventional commit messages, this repository contains [commitizen](https://github.com/commitizen/cz-cli) that assists with that. To commit your changes, run `yarn commit` in the root of the repository.
-
-### Branch-name Convention
-
-We follow the convention `[type/scope]`. For example `fix/lint-error` or `docs/component-api`. `type` can be either `docs`, `fix`, `feat`, `build`, or any other conventional commit type. `scope` is just a short id that describes the scope of work.
-
-### Development notes
-
-For the developer environment setup, project structure, best practices etc. you can go through the Development Notes [here.](https://github.com/moja-global/FLINT-UI/blob/master/docs/DevelopmentGuide/DevelopmentNotes.rst).
+   ```bash
+   git clone https://github.com/yourusername/gcbmx.git
+   cd gcbmx
 
 ### Read More
 
