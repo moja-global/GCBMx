@@ -1,19 +1,22 @@
-version: "1"
+version: "3"
 services:
   flint.example.api:
     build:
       context: ./flint-api/local/rest_api_flint.example
       dockerfile: Dockerfile
+    image: simpleshell/flint.example.api:latest
     ports:
       - "8080:8080"
     container_name: flint.example.api
     volumes:
       - ./flint-api/local/rest_api_flint.example/output:/server/output
       - ./flint-api/local/rest_api_flint.example/config:/server/config
+
   flint.gcbm.api:
     build:
       context: ./flint-api/local/rest_api_gcbm/
       dockerfile: Dockerfile
+    image: simpleshell/flint.gcbm.api:latest
     ports:
       - "8081:8080"
     container_name: flint.gcbm.api
@@ -21,10 +24,12 @@ services:
       - ./flint-api/local/rest_api_gcbm/output:/server/output
       - ./flint-api/local/rest_api_gcbm/config:/server/config
       - shared-output:/app/output
+
   viz.api:
     build:
       context: ./viz-api
       dockerfile: Dockerfile
+    image: simpleshell/viz.api:latest
     ports:
       - "8082:8080"
     container_name: viz.api
@@ -32,10 +37,12 @@ services:
       - ./viz-api/output:/server/output
       - ./viz-api/config:/server/config
       - shared-output:/shared-output
+
   user.ui:
     build:
       context: ./user-ui
       dockerfile: Dockerfile
+    image: simpleshell/user.ui:latest
     ports:
       - "8000:80"
     container_name: user.ui
@@ -43,10 +50,12 @@ services:
       - ./user-ui:/usr/src/app/user-ui
       - ./flint.api/local/rest_api_flint.example/output:/server/output
       - /usr/src/app/user-ui/node_modules
+
   data.api:
     build:
       context: ./data-api
       dockerfile: Dockerfile
+    image: simpleshell/data.api:latest
     ports:
       - "8083:8080"
     container_name: data.api
@@ -58,4 +67,3 @@ services:
 volumes:
   shared-output:
   shared-input:
-

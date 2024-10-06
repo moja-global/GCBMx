@@ -3,7 +3,7 @@
           <a-typography-title :level="2"><span class="font-normal text-earth"> Visualize </span></a-typography-title>
           <a-typography-text>
             <span class="text-earth mb-6 block">
-              Visualize the spatiol and aspatial outputs of the GCBM Simulation <br />
+              Visualize the spatial and aspatial outputs of the GCBM Simulation <br />
             </span
             >
           </a-typography-text>

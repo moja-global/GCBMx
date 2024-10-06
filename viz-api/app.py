@@ -5,6 +5,7 @@ import subprocess
 import tempfile
 from flask_cors import CORS
 import logging
+import sys
 
 app = Flask(__name__)
 CORS(
@@ -31,7 +32,8 @@ def run_visualization():
     # Construct paths
     SPATIAL = os.path.join(GCBM_API_OUTPUT, title, "spatial")
     ASPATIAL = os.path.join(GCBM_API_OUTPUT, title, "aspatial", "compiled_gcbm_output.db")
-    CONFIG = ASPATIAL = os.path.join(GCBM_API_OUTPUT, title, "config", "config.json")
+    CONFIG = os.path.join(GCBM_API_OUTPUT, title, "config", "config.json")
+    simulation_folder = os.path.join(GCBM_API_OUTPUT, title)
 
     if not os.path.exists(ASPATIAL):
         return jsonify({"error": "Simulation database not found"}), 404
@@ -43,26 +45,26 @@ def run_visualization():
     # Construct the command
     s = time.time()
     logging.debug("Starting Visualization")
-    f = open(f"{title}/viz_logs.csv", "w")
-    res = subprocess.Popen(
-        [
-            "taswira",
-            "--allow-unoptimized",
-            "CONFIG",
-            "ASPATIAL",
-            "SPATIAL",
-        ],
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-        universal_newlines=True,
-        cwd=f"{simulation_folder}",
-    )
-    for line in res.stdout:
-        sys.stdout.write(line)
-        f.write(line)
-        f.flush()
-    res.wait()
-    f.close()
+    with open(f"{GCBM_API_OUTPUT}/{title}/viz_logs.csv", "w") as f:
+        res = subprocess.Popen(
+            [
+                "taswira",
+                "--allow-unoptimized",
+                f"{CONFIG}",
+                f"{SPATIAL}",
+                f"{ASPATIAL}",
+            ],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            universal_newlines=True,
+            cwd=f"{simulation_folder}",
+        )
+        for line in res.stdout:
+            sys.stdout.write(line)
+            f.write(line)
+            f.flush()
+        res.wait()
+
     logging.debug("Communicating")
     (output, err) = res.communicate()
     logging.debug("Communicated")

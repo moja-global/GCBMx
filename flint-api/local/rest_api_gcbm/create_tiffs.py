@@ -102,19 +102,19 @@ def find_indicator_files(indicator, start_year=None):
 
     return indicator_output
 
-def get_start_year(spatial_output_path):
-    sim_config_dir = spatial_output_path.parent
-    config_file = spatial_output_path.parent.joinpath("localdomain.json")
+def get_start_year(output_path):
+    config_file = output_path.parent.joinpath("localdomain.json")
     if not config_file.exists():
-        return None
+        return logging.info("file not found")
 
     simulation_config = json.load(open(config_file, "r"))
     start_date = simulation_config["LocalDomain"]["start_date"]
+    logging.info(f"here is {start_date}")
 
     try:
         return datetime.strptime(start_date, "%Y/%m/%d").year
     except:
-        return None
+        return logging.info(f" error in year")
 
 def init_pool(worker_mem):
     gdal.SetCacheMax(worker_mem)
@@ -130,7 +130,7 @@ def process_spatial_output(spatial_output_path, output_path, epsg=None, do_clean
     pool = Pool(num_workers, init_pool, (worker_mem,))
 
     processed_indicators = []
-    start_year = get_start_year(spatial_output_path)
+    start_year = get_start_year(output_path)
     for indicator in spatial_output_path.iterdir():
         if (not indicator.is_dir() or indicator.name == "csv") or indicator.name in ["spatial", "aspatial", "config"]:
             continue
