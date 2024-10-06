@@ -466,7 +466,9 @@ def launch_run(title, input_dir):
         logging.debug("Output exists")
 
         # cut and paste output folder to app/output/simulation_name
+        output_localdom = os.path.join(output_dir, "localdomain.json")
         shutil.copytree(f"{input_dir}/output", output_dir)
+        shutil.copy(f"{input_dir}/localdomain.json", output_localdom)
         shutil.make_archive(
             f"{os.getcwd()}/output/{title}", "zip", output_dir
         )

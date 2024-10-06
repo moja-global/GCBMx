@@ -1,4 +1,22 @@
 {
+  "Dead_Organic_Matter_C": {
+    "title": "DOMCO2Emission - Disturbance",
+    "database_indicator": "DOMCO2Emission - Disturbance",
+    "file_pattern": "Dead_Organic_Matter_C_*.tif",
+    "graph_units": ""
+  },
+  "Bio_To_DOM_From_Disturbances": {
+    "title": "BiomassToDOM",
+    "database_indicator": "BiomassToDOM",
+    "file_pattern": "Bio_To_DOM_From_Disturbances_*.tif",
+    "graph_units": ""
+  },
+  "Age": {
+    "title": "Age",
+    "database_indicator": "Aboveground Biomass",
+    "file_pattern": "Age_*.tif",
+    "graph_units": ""
+  },
   "AG_Biomass_C": {
     "title": "Aboveground Biomass",
     "database_indicator": "Aboveground Biomass",
