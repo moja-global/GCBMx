@@ -17,5 +17,5 @@ dependencies:
     - dash==1.13.3
     - dash-leaflet==0.0.19
     - MarkupSafe==2.0.1
-    - taswira==0.1.1
+    - taswira==0.1.2
 
