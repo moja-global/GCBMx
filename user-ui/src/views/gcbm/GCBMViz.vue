@@ -33,7 +33,7 @@
                 items-center
                 gap-2
               "
-              @click="runViz"
+              @click="runit"
             >
               <LineChartOutlined />
               <span class="whitespace-nowrap">Visualize with Taswira</span>
@@ -90,7 +90,7 @@
           const logs = ref('')
 
           function fetchLogs(title) {
-              const eventSource = new EventSource(`${process.env.VUE_APP_REST_API_GCBM}/gcbm/logs/${title}`);
+              const eventSource = new EventSource(`${process.env.VUE_APP_REST_API_VIZ}/viz/logs/${title}`);
 
               eventSource.onmessage = (event) => {
                   const data = event.data;
@@ -110,6 +110,11 @@
               eventSource.onclose = () => {
                   console.log('SSE connection closed.');
               };
+          }
+
+          async function runit() {
+            this.runViz();
+            this.fetchLogs(this.simulation_title);
           }
 
           function runViz() {
@@ -150,7 +155,7 @@
 
 
 
-          return { simulation_title, runViz, logs, fetchLogs  }
+          return { simulation_title, runViz, logs, fetchLogs, runit  }
         }
       }
       </script>
