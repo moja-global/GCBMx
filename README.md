@@ -1,7 +1,7 @@
 <div align="center">
 <img src="https://moja.global/wp-content/uploads/2021/03/Asset-66@4x.png" alt="FLINT UI logo" height ="auto" width="200" />
 <br />
-<h1>gcbmx</h1>
+<h1>GCBMx</h1>
 <p>
   🚧🚧🚧🚧
 
@@ -74,12 +74,54 @@ The project follows a phased approach to ensure proper planning, development, an
 ### Prerequisites
 
 1. Install [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/).
+2. At least 4GB RAM
+3. 10GB free disk space
+4. Internet connection
 
-2. Clone the project repository:
+### Installation Options
+
+#### Option 1: Building from Source (Typical developer option)
+1. Clone the project repository:
 
    ```bash
-   git clone https://github.com/yourusername/gcbmx.git
+   git clone https://github.com/yourusername/GCBMx.git
    cd gcbmx
+
+2. Build and run using docker-compose
+   ```bash
+   docker-compose up -d --build
+
+#### Option 2: Using Pre-built Images from Docker Hub (Typical user option)
+1. Copy the docker-compose.yml from the repo [GCBMx docker compose](https://github.com/moja-global/GCBMx/blob/main/docker-compose.yml)
+   ```bash
+   docker-compose -f docker-compose.yml up -d
+
+### Verification and usage
+ - Check if containers are running
+   ```bash
+   docker-compose ps
+
+### Common commands
+ - Start the application
+   ```bash
+   docker-compose up -d
+
+ - Stop the application
+   ```bash
+   docker-compose down
+
+### Updating the Application
+ - For source-built version
+   ```bash
+   git pull
+   docker-compose down
+   docker-compose up -d --build
+
+ - For Docker Hub version
+   ```bash
+   docker-compose -f docker-compose.yml down
+   docker-compose -f docker-compose.yml pull
+   docker-compose -f docker-compose.yml up -d
 
 ### Read More
 
