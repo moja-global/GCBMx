@@ -809,7 +809,7 @@
             "order": 13,
             "library": "moja.modules.cbm",
             "settings": {
-                "databasename": "output/simulation_output.db"
+                "databasename": "gcbm_output.db"
             }
         }
 	}

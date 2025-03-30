@@ -1,5 +1,5 @@
 {
-  "ACCEPTED_FOLDER_NAMES": ["classifiers", "disturbances", "db", "miscellaneous", "config"],
+  "ACCEPTED_FOLDER_NAMES": ["classifiers", "disturbances", "db", "miscellaneous", "config", "templates"],
   "ACCEPTED_CONFIG_FILE_NAMES": [
     "localdomain.json",
     "modules_cbm.json",
@@ -8,6 +8,7 @@
     "variables.json",
     "internal_variables.json",
     "modules_output.json",
-    "provider_config.json"
+    "provider_config.json",
+    "gcbm_config.cfg"
   ]
 }

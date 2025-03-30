@@ -232,6 +232,38 @@ def gcbm_upload():
     }
 
 
+@app.route("/gcbm/upload_all", methods=["POST"])
+def gcbm_upload_all():
+    """
+    Upload all files and preserve folder structure based on `webkitRelativePath`.
+    Receives files with folder structure and saves them in corresponding folders.
+    """
+    title = request.form.get("title") or "simulation"
+    title = "".join(c for c in title if c.isalnum())  # Sanitize title
+
+    # Base directory to save files
+    input_dir = f"{os.getcwd()}/input/{title}"
+    os.makedirs(input_dir, exist_ok=True)
+
+    # Loop through the uploaded files
+    for file in request.files.getlist("file"):
+        # Extract the relative path for the file (this includes the folder structure)
+        relative_path = file.filename  # 'relative_path' will have folder structure, e.g., 'folder1/file1.txt'
+
+        # Create subdirectories based on the folder structure in the path
+        # file_path = os.path.join(input_dir, relative_path)
+        # os.makedirs(os.path.dirname(file_path), exist_ok=True)
+        folder_name = "/".join(relative_path.split("/")[1:])
+
+        # Save the file in the corresponding folder
+        os.makedirs(f"{input_dir}/{os.path.dirname(folder_name)}", exist_ok=True)
+
+        # Save the file in the corresponding folder
+        file.save(f"{input_dir}/{folder_name}")
+
+    return {"message": "Files uploaded successfully!"}
+
+
 @app.route("/config", methods=["POST"])
 def config_table():
     obj = request.get_json()
@@ -338,12 +370,16 @@ def gcbm_dynamic():
     title = "".join(c for c in title if c.isalnum())
     input_dir = f"{os.getcwd()}/input/{title}"
 
-    try:
-        get_config_templates(input_dir)
-        get_modules_cbm_config(input_dir)
-        get_provider_config(input_dir)
-    except:
-        return {"error": "please upload files before running dynamic endpoint"}, 400
+    # try:
+    #     get_config_templates(input_dir)
+    #     get_modules_cbm_config(input_dir)
+    #     get_provider_config(input_dir)
+    # except:
+    #     return {"error": "please upload files before running dynamic endpoint"}, 400
+
+    get_config_templates(input_dir)
+    get_modules_cbm_config(input_dir)
+    get_provider_config(input_dir)
 
     if not os.path.exists(f"{input_dir}"):
         os.makedirs(f"{input_dir}")
@@ -467,12 +503,14 @@ def launch_run(title, input_dir):
 
         # cut and paste output folder to app/output/simulation_name
         output_localdom = os.path.join(output_dir, "localdomain.json")
+        output_db = os.path.join(output_dir, "gcbm_output.db")
         shutil.copytree(f"{input_dir}/output", output_dir)
+        shutil.copy(f"{input_dir}/gcbm_output.db", output_db)
         shutil.copy(f"{input_dir}/localdomain.json", output_localdom)
         shutil.make_archive(
             f"{os.getcwd()}/output/{title}", "zip", output_dir
         )
-        shutil.rmtree((f"{input_dir}/output"))
+        # shutil.rmtree((f"{input_dir}/output"))
         logging.debug("Made archive")
         e = time.time()
 
@@ -504,7 +542,7 @@ def launch_run(title, input_dir):
             [
                 "python",
                 "compileresults.py",
-                f"sqlite:///{output_dir}/simulation_output.db",
+                f"sqlite:///{output_dir}/gcbm_output.db",
                 "--output_db",
                 f"sqlite:///{output_dir}/aspatial/compiled_gcbm_output.db",
             ],

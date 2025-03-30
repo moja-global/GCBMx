@@ -115,24 +115,29 @@ export default {
 
     const handleUpload = () => {
       const formData = new FormData()
+
+      formData.append('title', store.state.gcbm.config.title)
+
       fileList.value.forEach((file) => {
-        formData.append('files[]', file)
+        // Make sure the relative path is included when appending to FormData
+        formData.append('file', file)
       })
+
       uploading.value = true
-      // TODO: Add appropriate backend endpoint when ready.
-      fetch('https://run.mocky.io/v3/7c215bb2-7adb-4a4b-89ff-aea39fbbaf6f', {
-        method: 'post',
-        data: formData
+
+      fetch(`${process.env.VUE_APP_REST_API_GCBM}/gcbm/upload_all`, {
+        method: 'POST',
+        body: formData,  // Send the formData with file content
       })
         .then(() => {
           fileList.value = []
           uploading.value = false
-          message.success('upload successfully.')
+          message.success('Upload successfully.')
           emit('ok')
         })
         .catch(() => {
           uploading.value = false
-          message.error('upload failed.')
+          message.error('Upload failed.')
         })
     }
 

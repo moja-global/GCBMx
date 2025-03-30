@@ -20,7 +20,7 @@
             <UploadAll
               :visible="uploadAllModalVisible"
               @cancel="() => (uploadAllModalVisible = false)"
-              @ok="() => (uploadAllModalVisible = false)"
+              @ok="() => { uploadAllModalVisible = false; AllUploaded = true; }"
             />
           </span>
         </a-typography-text>
@@ -169,6 +169,7 @@ export default {
     const store = useStore()
     const title = ref('')
     const classifiersUploaded = ref(false)
+    const AllUploaded = ref(true)
 
     const affixHidden = ref(false)
     const affixIconRotate = ref('rotate(0deg)')
@@ -183,7 +184,7 @@ export default {
 
     watchEffect(() => {
       title.value = store.state.gcbm.config.title
-      classifiersUploaded.value = store.state.gcbm.filesUploaded.classifiers.length > 0
+      classifiersUploaded.value = store.state.gcbm.filesUploaded.classifiers.length > 0 || AllUploaded
 
       const path = trimSlashes(route.path)
 
@@ -239,6 +240,7 @@ export default {
       selectedKeys,
       affixIconRotate,
       classifiersUploaded,
+      AllUploaded,
       uploadAllModalVisible,
       onMenuItemClick,
       onSimulationCancelClick
